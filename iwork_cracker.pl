@@ -3,6 +3,7 @@
 # Author: philsmd
 # Date: May 2020
 # License: public domain, credits go to philsmd and hashcat
+# Usage: perl iwork_cracker.pl dict.txt
 
 use strict;
 use warnings;
@@ -95,6 +96,8 @@ my $pbkdf2 = Crypt::PBKDF2->new
   iterations => $iterations,
   output_len => 16,
 );
+
+#print $pbkdf2
 
 while (my $pass = <>)
 {
